@@ -6,7 +6,7 @@ Disco Elysium:
 
 Hora de Aventura:
 
-Smash Bros:
+Smash Bros: RIOS NAVA LUIS EDUARDO
 
 
 
