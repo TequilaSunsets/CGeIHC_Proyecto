@@ -82,6 +82,18 @@ Texture Numero2Texture;
 Model Escenario;
 Model TabDia;
 Model TabNoche;
+///////////////////////Modelo Disco Elysium////////////////
+Model arma_DE;
+Model carpeta_DE;
+Model sombrero_DE;
+Model criptido_DE;
+Model Cuno_DE;
+Model chaqueta_DE;
+Model gordo_DE;
+Model Jean_DE;
+Model Kim_DE;
+Model Ruud_DE;
+Model Tequila_DE;
 //////////////////////////////////////////////////////////
 
 Skybox skybox;
@@ -394,6 +406,29 @@ int main()
 	TabDia.LoadModel("Models/tablerodia.obj");
 	TabNoche = Model();
 	TabNoche.LoadModel("Models/tableroNoche.obj");
+	/////////////////////Disco Elysium/////////////////////
+	arma_DE = Model();
+	arma_DE.LoadModel("Models/Arma_Servicio/arma_servicio.obj");
+	carpeta_DE = Model();
+	carpeta_DE.LoadModel("Models/Carpeta/Carpeta.obj");
+	sombrero_DE = Model();
+	sombrero_DE.LoadModel("Models/Comunista/sombrero_camarada.obj");
+	criptido_DE = Model();
+	criptido_DE.LoadModel("Models/Criptido/Criptido.obj");
+	Cuno_DE = Model();
+	Cuno_DE.LoadModel("Models/Cuno/Cuno.obj");
+	chaqueta_DE = Model();
+	chaqueta_DE.LoadModel("Models/FuckWorld/fuckTheWorld_jacket.obj");
+	gordo_DE = Model();
+	gordo_DE.LoadModel("Models/GordoMamon/evrartClaire.obj");
+	Jean_DE = Model();
+	Jean_DE.LoadModel("Models/Jean/jean.obj");
+	Kim_DE = Model();
+	Kim_DE.LoadModel("Models/Kim/Kim.obj");
+	Ruud_DE = Model();
+	Ruud_DE.LoadModel("Models/Ruud/ruud.obj");
+	Tequila_DE = Model();
+	Tequila_DE.LoadModel("Models/Tequila/Tequila.obj");
 	//////////////////////////////////////////////////////////
 
 
@@ -571,11 +606,110 @@ int main()
 		TabDia.RenderModel();*/
 
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(10.0f, -2.8f, 0.0f));
+		modelaux = model = glm::translate(model, glm::vec3(10.0f, -2.8f, 0.0f));
 		model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
 		TabNoche.RenderModel();
+
+		model = modelaux;
+		////////////////////Arma de Servicio////////////////////////////////
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		arma_DE.RenderModel();
+
+		model = modelaux;
+		////////////////////Carpeta////////////////////////////////
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		carpeta_DE.RenderModel();
+
+		model = modelaux;
+		////////////////////Comunista////////////////////////////////
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		sombrero_DE.RenderModel();
+
+		model = modelaux;
+		////////////////////Criptido////////////////////////////////
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		criptido_DE.RenderModel();
+
+		model = modelaux;
+		////////////////////Cuno////////////////////////////////
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		Cuno_DE.RenderModel();
+
+		model = modelaux;
+		////////////////////FuckTheWorld////////////////////////////////
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		chaqueta_DE.RenderModel();
+
+		model = modelaux;
+		////////////////////Gordo////////////////////////////////
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		gordo_DE.RenderModel();
+
+		model = modelaux;
+		////////////////////Jean////////////////////////////////
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		Jean_DE.RenderModel();
+
+		model = modelaux;
+		////////////////////Kim////////////////////////////////
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		Kim_DE.RenderModel();
+
+		model = modelaux;
+		////////////////////Ruud////////////////////////////////
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		Ruud_DE.RenderModel();
+
+		model = modelaux;
+		////////////////////Tequila////////////////////////////////
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f));
+		//model = glm::scale(model, glm::vec3(10.0f, 1.0f, 10.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		Tequila_DE.RenderModel();
 
 	/*
 		//plano con todos los números
